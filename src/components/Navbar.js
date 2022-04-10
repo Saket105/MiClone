@@ -1,7 +1,9 @@
 import React from "react";
 import "../styles/nav.css";
 // import { logo } from "../data/data.json";
+const data = require("../data/data.json");
 
+const { logo } = data;
 const searchIcon = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -16,9 +18,6 @@ const searchIcon = (
 );
 
 const Navbar = () => {
-  const data = require("../data/data.json");
-  const { logo } = data;
-  console.log(data);
   return (
     <div className="nav">
       <div className="logo">
