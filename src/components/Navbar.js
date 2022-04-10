@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/nav.css";
-// import { logo } from "../data/data.json";
 const data = require("../data/data.json");
 
 const { logo } = data;
