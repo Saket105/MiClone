@@ -5,6 +5,8 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Slider from "./components/Slider";
 import Offers from "./components/Offers";
 const data = require("./data/data.json");
+
+
 function App() {
   return (
     <Router>
