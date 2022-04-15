@@ -21,12 +21,64 @@ function App() {
       <StarProduct starProducts={data.starProduct} />
       <Heading text="HOT ACCESSORIES" />
       <HotAccessoriesMenu />
-      {/* <Route exact path="/music"> */}
-      <HotAccessories
-        music={data.hotAccessories.music}
-        musicCover={data.hotAccessoriesCover.music}
-      />
-      {/* </Route> */}
+      <Routes>
+        <Route
+          exact
+          path="/music"
+          element={
+            <HotAccessories
+              music={data.hotAccessories.music}
+              musicCover={data.hotAccessoriesCover.music}
+            />
+          }
+        ></Route>
+        <Route
+          exact
+          path="/smartDevice"
+          element={
+            <HotAccessories
+              smartDevics={data.hotAccessories.smartDevice}
+              smartDevicsCover={data.hotAccessoriesCover.smartDevice}
+            />
+          }
+        ></Route>
+
+        <Route
+          exact
+          path="/home"
+          element={
+            <HotAccessories
+              home={data.hotAccessories.home}
+              homeCover={data.hotAccessoriesCover.home}
+            />
+          }
+        ></Route>
+
+        <Route
+          exact
+          path="/lifestyle"
+          element={
+            <HotAccessories
+              lifestyle={data.hotAccessories.lifeStyle}
+              lifestyleCover={data.hotAccessoriesCover.lifeStyle}
+            />
+          }
+        ></Route>
+
+        <Route
+          exact
+          path="/mobileAccessories"
+          element={
+            <HotAccessories
+              mobileAccessories={data.hotAccessories.mobileAccessories}
+              mobileAccessoriesCover={
+                data.hotAccessoriesCover.mobileAccessories
+              }
+            />
+          }
+        ></Route>
+      </Routes>
+      <Heading text="PRODUCT REVIEWS" />
     </Router>
   );
 }
