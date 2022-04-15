@@ -1,9 +1,25 @@
 import React from "react";
-// import HotItemCard from "./HotItemCard.js";
+import HotItemCard from "./HotItemCard.js";
+import '../styles/HotAccessories.css'
 const HotAccessories = ({ music, musicCover }) => {
   return (
     <div className="HotAccessories">
-      <h1>Hello </h1>
+      <div>
+        <img src={musicCover} alt="Cover" />
+      </div>
+
+      {/* ------------------2nd ------------------------- */}
+      <div>
+        {music.map((item, index) => (
+          <HotItemCard
+            key={item.image}
+            name={item.name}
+            price={item.price}
+            image={item.image}
+            index={index}
+          />
+        ))}
+      </div>
     </div>
   );
 };

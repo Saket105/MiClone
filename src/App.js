@@ -1,7 +1,7 @@
 import "./App.css";
 import PreNavbar from "./components/PreNavbar";
 import Navbar from "./components/Navbar";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Slider from "./components/Slider";
 import Heading from "./components/Heading";
 import Offers from "./components/Offers";
@@ -21,12 +21,12 @@ function App() {
       <StarProduct starProducts={data.starProduct} />
       <Heading text="HOT ACCESSORIES" />
       <HotAccessoriesMenu />
-      <Route exact path="/music">
-        <HotAccessories
-          music={data.hotAccessories.music}
-          musicCover={data.hotAccessoriesCover.music}
-        />
-      </Route>
+      {/* <Route exact path="/music"> */}
+      <HotAccessories
+        music={data.hotAccessories.music}
+        musicCover={data.hotAccessoriesCover.music}
+      />
+      {/* </Route> */}
     </Router>
   );
 }
