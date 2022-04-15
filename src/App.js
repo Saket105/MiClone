@@ -1,14 +1,14 @@
 import "./App.css";
 import PreNavbar from "./components/PreNavbar";
 import Navbar from "./components/Navbar";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Slider from "./components/Slider";
 import Heading from "./components/Heading";
 import Offers from "./components/Offers";
 import StarProduct from "./components/StarProduct";
 import HotAccessoriesMenu from "./components/HotAccessoriesMenu";
+import HotAccessories from "./components/HotAccessories";
 const data = require("./data/data.json");
-
 
 function App() {
   return (
@@ -20,7 +20,13 @@ function App() {
       <Heading text="STAR PRODUCTS" />
       <StarProduct starProducts={data.starProduct} />
       <Heading text="HOT ACCESSORIES" />
-      <HotAccessoriesMenu/>
+      <HotAccessoriesMenu />
+      <Route exact path="/music">
+        <HotAccessories
+          music={data.hotAccessories.music}
+          musicCover={data.hotAccessoriesCover.music}
+        />
+      </Route>
     </Router>
   );
 }
