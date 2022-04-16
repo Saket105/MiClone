@@ -7,7 +7,9 @@ import Heading from "./components/Heading";
 import Offers from "./components/Offers";
 import StarProduct from "./components/StarProduct";
 import HotAccessoriesMenu from "./components/HotAccessoriesMenu";
+import ProductReviews from "./components/ProductReviews";
 import HotAccessories from "./components/HotAccessories";
+import Videos from "./components/Videos";
 const data = require("./data/data.json");
 
 function App() {
@@ -79,6 +81,10 @@ function App() {
         ></Route>
       </Routes>
       <Heading text="PRODUCT REVIEWS" />
+      <ProductReviews productReviews={data.productReviews} />
+
+      <Heading text="VIDEOS" />
+      <Videos videos={data.videos}/>
     </Router>
   );
 }
