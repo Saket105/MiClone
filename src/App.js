@@ -12,6 +12,7 @@ import HotAccessories from "./components/HotAccessories";
 import Videos from "./components/Videos";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
+import NavOptions from "./components/NavOptions";
 const data = require("./data/data.json");
 
 function App() {
@@ -19,6 +20,16 @@ function App() {
     <Router>
       <PreNavbar />
       <Navbar />
+      <NavOptions 
+      miPhones={data.miPhones}
+       redmiPhones = {data.redmiPhones}
+       tv={data.tv}
+       laptop={data.laptop}
+       fitnessAndLifeStyle={data.fitnessAndLifeStyle}
+       home={data.home}
+       audio={data.audio}
+       accessories={data.accessories}/>
+       
       <Slider start={data.banner.start} />
       <Offers offer={data.offer} />
       <Heading text="STAR PRODUCTS" />
