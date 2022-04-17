@@ -10,6 +10,8 @@ import HotAccessoriesMenu from "./components/HotAccessoriesMenu";
 import ProductReviews from "./components/ProductReviews";
 import HotAccessories from "./components/HotAccessories";
 import Videos from "./components/Videos";
+import Banner from "./components/Banner";
+import Footer from "./components/Footer";
 const data = require("./data/data.json");
 
 function App() {
@@ -85,6 +87,10 @@ function App() {
 
       <Heading text="VIDEOS" />
       <Videos videos={data.videos}/>
+
+      <Heading text="IN THE PRESS" />
+      <Banner banner={data.banner}/>
+      <Footer/>
     </Router>
   );
 }
