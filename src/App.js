@@ -90,7 +90,7 @@ function App() {
 
       <Heading text="IN THE PRESS" />
       <Banner banner={data.banner}/>
-      <Footer/>
+      <Footer footer={data.footer}/>
     </Router>
   );
 }
